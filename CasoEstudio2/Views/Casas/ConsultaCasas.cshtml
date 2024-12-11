@@ -1,0 +1,35 @@
+﻿@model List<CasoEstudio2.Models.CasasModel>
+
+<div class="row">
+    <h1 class="text-center mb-3">Consulta de Casas</h1>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 bg-white p-3">
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Cedula</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Marca</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var casa in Model)
+                    {
+                        <tr>
+                            <td>@casa.DescripcionCasa</td>
+                            <td>@casa.PrecioCasa</td>
+                            <td>@casa.UsuarioAlquiler</td>
+                            <td>@casa.EstadoAlquiler</td>
+                            <td>@casa.FechaAlquiler</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+        <div class="col-2"></div>
+    </div>
+</div>
